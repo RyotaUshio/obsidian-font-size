@@ -1,29 +1,25 @@
-# Obsidian Sample Plugin
+# Obsidian Font Size Adjuster
 
-This is a modified version of https://github.com/obsidianmd/obsidian-sample-plugin.
+This is an [Obsidian.md](https://obsidian.md) plugin, which allows you to  adjust font size via the `Increment font size` & `Decrement font size` commands.
 
-## Differences from the original sample plugin
+> [!note]
+> If you like this plugin, don't forget to star this repository! I'd also appreciate it if you could [support me](#support-development).
 
-- `*.ts` files are put in the `src` directory
-- The plugin class definition and settings-related code are separated into `main.ts` and `settings.ts`
-- [Release GitHub action](https://docs.obsidian.md/Plugins/Releasing/Release+your+plugin+with+GitHub+Actions) is already there
-  - Don't forget to go to `Settings > Actions > General > Workflow permissions` and turn on `Read and write permissions`
-- The default branch has been renamed `main`
+## Installation
 
-## Usage
+Since this plugin is still awaiting approval from the Obsidian team, it's not available in the community plugin browser yet.
 
-1. Create a new repository using this template ("Use this template" > "Create a new repository")
-2. Clone the created repository
-3. Modify at least the `id` & `name` fields in `manifest.json`.
-4. Modify `package.json` accordingly.
-5. Run `npm i` to install the dependencies
-6. Run `npm run dev` or `npm run build` to compile your plugin
+But you can install the latest release using [BRAT](https://github.com/TfTHacker/obsidian42-brat).
 
-### Releasing your plugin
+1. Install the latest version of BRAT and enable it.
+2. _(Optional but highly recommended)_ In the BRAT settings, turn on `Auto-update plugins at startup` at the top of the page.
+3. Open the following URL in the browser: `obsidian://brat?plugin=RyotaUshio/obsidian-font-size`.
+4. Click the "Add Plugin" button.
 
-1. If you haven't, go to `Settings > Actions > General > Workflow permissions` and turn on `Read and write permissions`
-2. Bump the version in `manifest.json` (and `package.json`) and then commit & push the change
-3. `git tag -a <version> -m "<version>"`
-4. `git push origin <version>`. This triggers the release action.
-5. When the action is completed, go to the release page of your repository. You will find a newly created draft release.
-6. Release the draft when you're ready.
+## Support development
+
+If you find [my plugins](https://ryotaushio.github.io/the-hobbyist-dev/) useful, please support my work to ensure they continue to work!
+
+<a href="https://github.com/sponsors/RyotaUshio" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="GitHub Sponsors" style="width: 180px; height:auto;"></a>
+
+<a href="https://www.buymeacoffee.com/ryotaushio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="width: 180px; height:auto;"></a>
