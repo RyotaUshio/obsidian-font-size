@@ -11,15 +11,18 @@ declare module "obsidian" {
 	}
 }
 
+
 export default class FontSizeAdjuster extends Plugin {
 	async onload() {
 		this.addCommand({
 			id: 'increment-font-size',
 			name: 'Increment Font Size',
 			callback: () => {
-				const currentSize: number = this.app.vault.getConfig('baseFontSize');
-				this.app.vault.setConfig('baseFontSize', currentSize + 1);
-				this.app.updateFontSize();
+				const currentSize = this.app.vault.getConfig('baseFontSize');
+				if (typeof currentSize === 'number') {
+					this.app.vault.setConfig('baseFontSize', currentSize + 1);
+					this.app.updateFontSize();
+				}
 			}
 		});
 
@@ -27,9 +30,11 @@ export default class FontSizeAdjuster extends Plugin {
 			id: 'decrement-font-size',
 			name: 'Decrement Font Size',
 			callback: () => {
-				const currentSize: number = this.app.vault.getConfig('baseFontSize');
-				this.app.vault.setConfig('baseFontSize', currentSize - 1);
-				this.app.updateFontSize();
+				const currentSize = this.app.vault.getConfig('baseFontSize');
+				if (typeof currentSize === 'number') {
+					this.app.vault.setConfig('baseFontSize', currentSize - 1);
+					this.app.updateFontSize();
+				}
 			}
 		});
 	}
