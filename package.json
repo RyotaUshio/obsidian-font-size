@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-font-size",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "An Obsidian.md plugin to adjuster font size via commands.",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
