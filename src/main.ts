@@ -17,24 +17,31 @@ export default class FontSizeAdjuster extends Plugin {
 		this.addCommand({
 			id: 'increment-font-size',
 			name: 'Increment font size',
-			callback: () => {
+			checkCallback: (checking) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
-				if (typeof currentSize === 'number') {
+
+				if (typeof currentSize !== 'number') return false;
+
+				if (!checking) {
 					this.app.vault.setConfig('baseFontSize', currentSize + 1);
 					this.app.updateFontSize();
 				}
+				return true;
 			}
 		});
 
 		this.addCommand({
 			id: 'decrement-font-size',
 			name: 'Decrement font size',
-			callback: () => {
+			checkCallback: (checking) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
-				if (typeof currentSize === 'number') {
+				if (typeof currentSize !== 'number') return false;
+
+				if (!checking) {
 					this.app.vault.setConfig('baseFontSize', currentSize - 1);
 					this.app.updateFontSize();
 				}
+				return true;
 			}
 		});
 	}
