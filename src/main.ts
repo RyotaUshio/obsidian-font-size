@@ -16,7 +16,7 @@ export default class FontSizeAdjuster extends Plugin {
 	async onload() {
 		this.addCommand({
 			id: 'increment-font-size',
-			name: 'Increment Font Size',
+			name: 'Increment font size',
 			callback: () => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
 				if (typeof currentSize === 'number') {
@@ -28,7 +28,7 @@ export default class FontSizeAdjuster extends Plugin {
 
 		this.addCommand({
 			id: 'decrement-font-size',
-			name: 'Decrement Font Size',
+			name: 'Decrement font size',
 			callback: () => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
 				if (typeof currentSize === 'number') {
