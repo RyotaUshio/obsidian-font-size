@@ -17,14 +17,7 @@ I recommend the following hotkeys (in the case of macOS with a US-layout keyboar
 
 ## Installation
 
-Since this plugin is still awaiting approval from the Obsidian team, it's not available in the community plugin browser yet.
-
-But you can install the latest release using [BRAT](https://github.com/TfTHacker/obsidian42-brat).
-
-1. Install the latest version of BRAT and enable it.
-2. _(Optional but highly recommended)_ In the BRAT settings, turn on `Auto-update plugins at startup` at the top of the page.
-3. Open the following URL in the browser: `obsidian://brat?plugin=RyotaUshio/obsidian-font-size`.
-4. Click the "Add Plugin" button.
+You can install this plugin from within Obsidian's community plugin browser.
 
 ## Support development
 
