@@ -44,5 +44,23 @@ export default class FontSizeAdjuster extends Plugin {
 				return true;
 			}
 		});
+
+		this.addCommand({
+			id: 'reset-font-size',
+			name: 'Rest font size to default',
+			checkCallback: (checking: boolean) => {
+				const currentSize = this.app.vault.getConfig('baseFontSize');
+				if (typeof currentSize !== 'number') return false;
+
+				if (!checking) {
+					// default value for font-text is 16px
+					// https://docs.obsidian.md/Reference/CSS+variables/Foundations/Typography
+					this.app.vault.setConfig('baseFontSize', 16);
+					this.app.updateFontSize();
+				}
+				return true;
+			}
+
+		});
 	}
 }
