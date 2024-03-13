@@ -22,6 +22,10 @@ export default class FontSizeAdjuster extends Plugin {
 
 				if (typeof currentSize !== 'number') return false;
 
+				// updateFontSize() actually clamps font size to '10 <= size <= 30'
+				// so making font size doesn't go over 30px
+				if (currentSize >= 30) return false;
+
 				if (!checking) {
 					this.app.vault.setConfig('baseFontSize', currentSize + 1);
 					this.app.updateFontSize();
@@ -35,7 +39,11 @@ export default class FontSizeAdjuster extends Plugin {
 			name: 'Decrement font size',
 			checkCallback: (checking) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
+
 				if (typeof currentSize !== 'number') return false;
+				// updateFontSize() actually clamps font size to '10 <= size <= 30'
+				// so making font size doesn't go under 10px
+				if (currentSize <= 10) return false;
 
 				if (!checking) {
 					this.app.vault.setConfig('baseFontSize', currentSize - 1);
