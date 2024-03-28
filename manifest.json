@@ -1,7 +1,7 @@
 {
 	"id": "font-size",
 	"name": "Font Size Adjuster",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"minAppVersion": "1.3.5",
 	"description": "Adjust font size via commands.",
 	"author": "Ryota Ushio",
