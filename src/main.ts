@@ -16,7 +16,7 @@ export default class FontSizeAdjuster extends Plugin {
 	async onload() {
 		this.addCommand({
 			id: 'increment-font-size',
-			name: 'Increment font size',
+			name: 'Increase Font Size (+)',
 			repeatable: true, // holding hotkey repeatedely trigger command
 			checkCallback: (checking) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
@@ -37,7 +37,7 @@ export default class FontSizeAdjuster extends Plugin {
 
 		this.addCommand({
 			id: 'decrement-font-size',
-			name: 'Decrement font size',
+			name: 'Decrease Font Size (-)',
 			repeatable: true, // holding hotkey repeatedely trigger command
 			checkCallback: (checking) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
@@ -57,7 +57,7 @@ export default class FontSizeAdjuster extends Plugin {
 
 		this.addCommand({
 			id: 'reset-font-size',
-			name: 'Rest font size to default',
+			name: 'Reset to Default Font Size',
 			checkCallback: (checking: boolean) => {
 				const currentSize = this.app.vault.getConfig('baseFontSize');
 				if (typeof currentSize !== 'number') return false;
